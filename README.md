@@ -43,3 +43,17 @@ success1.html中代码如下：
             <p><font color="red">${application.x}将返回一个名为x的全局ServletContext上下文作用范围域中的属性。</font></p><br/>
             访问application作用范围域中的变量：<span th:text="${application.name}">动态页面模板</span><br/>
         </ div>
+
+四、th:if th:unless th:switch 表达式
+
+详细见sccess2.html,
+
+if时，表达式为真，则显示标签。
+
+unless，逻辑和if相反
+
+五、th:each 遍历
+
+controller中是list的数据，th中遍历。适合表格显示数据！
+
+见success3.html,既第三个链接。
