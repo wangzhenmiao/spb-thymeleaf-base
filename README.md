@@ -3,7 +3,9 @@
 
 一、th:href 可以发送请求到controller
 比如：
-<a 分割 th:href="@{regexptest?loginName=jack&amp;password=123456}">测试表达式访问数据</ 分割 a><br/><br/>
+
+    <a th:href="@{regexptest?loginName=jack&amp;password=123456}">测试表达式访问数据</a><br/><br/>
+
 可以发送一个到 @RequestMapping("/regexptest") 这个注解的请求
 
 二、controller中，可以把变量存放在变量中
@@ -31,7 +33,7 @@ ThymeleafController，controller中代码如下：
 
 success1.html中代码如下：
 
-<div 分割 class="col-md-4">
+     <div class="col-md-4">
             <p><font color="red">${param.x}将返回一个名为x的请求参数</font></p><br/>
             访问页面传递的参数：<span th:text="${param.loginName[0]}">登录名</span>&nbsp;<span th:text="${param.password[0]}">密码</span>
             <p><font color="red">${x}将返回存储在Thymeleaf上下文中的变量x或作为请求Request作用范围域中的属性。</font></p><br/>
@@ -40,4 +42,4 @@ success1.html中代码如下：
             访问session作用范围域中的变量：<span th:text="${session.school}">培训中心</span><br/>
             <p><font color="red">${application.x}将返回一个名为x的全局ServletContext上下文作用范围域中的属性。</font></p><br/>
             访问application作用范围域中的变量：<span th:text="${application.name}">动态页面模板</span><br/>
-        </ 分割 div>
+        </ div>
